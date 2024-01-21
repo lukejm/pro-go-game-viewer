@@ -11,6 +11,15 @@
   border: 0;
 }
 
+.squareButton {
+  background-color: transparent;
+  height: auto;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 .boardRow {
   display: flex;
 
@@ -22,6 +31,6 @@
   display: grid;
   grid-gap: 0;
   grid-auto-flow: row;
-  scale: 2;
+  scale: 1;
 
 }

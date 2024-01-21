@@ -1,15 +1,11 @@
-// import React from 'react';
-//
-// function square(squareId) {
-//   constructor(squareId)
-//   render() {
-//     return (
-//       <div key={this.id}>
-//         <img src='../assets/square.png' className='square' alt='Game Square'/>
-//       </div>
-//     );
-//   }
-// }
-//
-//
-// export default Square;
+import squareImg from '../assets/square.svg';
+
+function Square({ squareKey }) {
+  return (
+    <button className='squareButton' key={squareKey}>
+      <img src={squareImg} className='square' alt='square' />
+    </button>
+  );
+}
+
+export default Square;

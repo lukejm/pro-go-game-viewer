@@ -1,18 +1,16 @@
 import {createKeys} from "./GameBoardHelpers.jsx";
-import squareImg from '../assets/square.svg';
+import Square from "./Square.jsx";
 
 function innerJsx(keys) {
   return keys.map((key) => {
-    return (<img src={squareImg} className='square' alt='square' key={key} />)
+    return (
+      <Square squareKey={key} />
+    )
   });
 }
 
 function GameBoard() {
-
   const keys = createKeys();
-
-
-  console.log(innerJsx(keys));
 
   const board = keys.map((keys, index) => {
     return (<div className='boardRow' key={index}>{innerJsx(keys)}</div>)
