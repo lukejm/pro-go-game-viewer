@@ -1,25 +1,29 @@
-import Square from "./Square.jsx";
-import {initId, boardRowClose, boardRowOpen, createKeys} from "./GameBoardHelpers.jsx";
+import {createKeys} from "./GameBoardHelpers.jsx";
+import squareImg from '../assets/square.svg';
 
+function innerJsx(keys) {
+  return keys.map((key) => {
+    return (<img src={squareImg} className='square' alt='square' key={key} />)
+  });
+}
 
-const GameBoard = () => {
+function GameBoard() {
 
   const keys = createKeys();
-  function innerJsx(keys) {
-    return keys.map((key, index) => {
-      <Square squareId={key}/>
-    });
-  }
+
+
+  console.log(innerJsx(keys));
 
   const board = keys.map((keys, index) => {
-    innerJsx(keys);
+    return (<div className='boardRow' key={index}>{innerJsx(keys)}</div>)
   });
 
-
   return (
-    <div className='board'>
-      {board}
-    </div>
+    <>
+      <div className='board'>
+        {board}
+      </div>
+    </>
   );
 }
 
