@@ -4,16 +4,17 @@ import Square from "./Square.jsx";
 function innerJsx(keys) {
   return keys.map((key) => {
     return (
-      <Square squareKey={key} />
+      <Square key={key} />
     )
   });
 }
 
 function GameBoard() {
-  const keys = createKeys();
+  const allKeys = createKeys();
 
-  const board = keys.map((keys, index) => {
-    return (<div className='boardRow' key={index}>{innerJsx(keys)}</div>)
+  const board = allKeys.map((keys, index) => {
+    const row = innerJsx(keys);
+    return (<div className='boardRow' key={index}>{row}</div>);
   });
 
   return (
