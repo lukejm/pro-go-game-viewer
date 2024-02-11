@@ -1,15 +1,17 @@
-import {createKeys} from "./GameBoardHelpers.jsx";
+import {createKeys} from "../utils/GameBoardHelpers.jsx";
+import BoardSquare from '../assets/board/white_square.svg?react';
 
 
 function innerJsx(keys) {
   return keys.map((key) => {
     return (
-      <button key={key} id={key} className='squareButton'></button>
+      <BoardSquare key={key} id={key} className='square' />
+      // <button key={key} id={key} className='squareButton'><BoardSquare className='' /></button>
     )
   });
 }
 
-function GameBoard() {
+export default function GameBoard() {
   const allKeys = createKeys();
 
   const board = allKeys.map((keys, index) => {
@@ -25,5 +27,3 @@ function GameBoard() {
     </>
   );
 }
-
-export default GameBoard;

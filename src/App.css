@@ -1,8 +1,14 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /*padding: 2rem;*/
   text-align: center;
+}
+
+.boardRow {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 .square {
@@ -12,9 +18,9 @@
 }
 
 .squareButton {
-  background-image: url('./assets/square.svg');
+  /*background-image: url('assets/board/square.svg');*/
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   height: 1em;
   width: 1em;
   padding: 0;
@@ -23,15 +29,18 @@
 }
 
 .squareButtonBlack {
-
+  background-image: url('./assets/board/black_square.svg');
 }
 
 .squareButtonWhite {
-  background-mage: url('./assets/white.svg');
+  background-image: url('./assets/board/white_square.svg');
 }
 
 .boardRow {
   display: flex;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 .board {
